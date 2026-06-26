@@ -324,25 +324,39 @@ function stopLcdBridge(clearScreen = false) {
   }
 
   const bridge = lcdBridge;
+  const bridgePid = bridge.pid;
   lcdBridge = null;
   lcdBridgeReady = false;
 
-  if (bridge.exitCode === null && !bridge.killed) {
-    const killBridge = () => {
-      if (bridge.exitCode === null && !bridge.killed) {
+  const forceKillBridge = () => {
+    if (bridge.exitCode !== null || bridge.killed) {
+      return;
+    }
+
+    try {
+      if (process.platform === "win32" && bridgePid) {
+        require("child_process").spawnSync(
+          "taskkill",
+          ["/PID", String(bridgePid), "/T", "/F"],
+          { stdio: "ignore" }
+        );
+      } else {
         bridge.kill();
       }
-    };
+    } catch (error) {
+      console.warn(`Failed to stop LCD bridge: ${error.message}`);
+    }
+  };
 
-    if (clearScreen) {
-      const timer = setTimeout(killBridge, 300);
-      if (typeof timer.unref === "function") {
-        timer.unref();
-      }
-    } else {
-      killBridge();
+  if (clearScreen) {
+    try {
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 250);
+    } catch {
+      // Ignore if Atomics.wait is unavailable.
     }
   }
+
+  forceKillBridge();
 }
 
 function shutdownApp() {
