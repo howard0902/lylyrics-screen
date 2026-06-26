@@ -2,6 +2,10 @@
 
 把 Spotify 現正播放的歌詞，直接顯示到 Thermalright USB LCD 上的 Windows app。
 
+## 專案連結
+
+- GitHub: [Lyrics-Screen](https://github.com/ChuangHoward902/Lyrics-Screen)
+
 ## 功能
 
 - 直接讀取 Spotify 播放狀態
@@ -14,7 +18,7 @@
 
 ## 安裝
 
-1. 到 GitHub Release 下載安裝檔。
+1. 到 GitHub Release 下載安裝檔： [v0.1.0](https://github.com/ChuangHoward902/Lyrics-Screen/releases/tag/v0.1.0)
 2. 執行 `lyLyrics screen-0.1.0-x64.exe`。
 3. 完成安裝後，程式會出現在：
 
@@ -68,6 +72,26 @@ C:\Users\你的使用者名稱\AppData\Local\Programs\lylyrics-screen
 npm install
 python -m pip install -r requirements-lcd.txt
 ```
+
+## 打包
+
+建立 Windows 安裝檔：
+
+```bash
+npm run dist
+```
+
+輸出檔會在：
+
+```text
+dist/lyLyrics screen-0.1.0-x64.exe
+```
+
+## Release 檔案
+
+正式發布只需要放安裝檔：
+
+- `lyLyrics screen-0.1.0-x64.exe`
 
 ## 授權
 
