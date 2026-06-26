@@ -2,6 +2,12 @@
 
 把 Spotify 現正播放的歌詞，直接顯示到 Thermalright USB LCD 上的 Windows app。
 
+## 展示
+
+![App showcase](assets/readme/showcase.png)
+
+[展示影片：demo.mp4](assets/readme/demo.mp4)
+
 ## 專案連結
 
 - GitHub: [Lyrics-Screen](https://github.com/ChuangHoward902/Lyrics-Screen)
