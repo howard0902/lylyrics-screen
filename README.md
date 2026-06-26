@@ -93,6 +93,20 @@ dist/lyLyrics screen-0.1.0-x64.exe
 
 - `lyLyrics screen-0.1.0-x64.exe`
 
+## 測試型號
+
+目前只測試過 `Vision 360` 這個型號，其他型號還沒有實際驗證過。
+
+## 感謝
+
+感謝以下專案與資料提供參考：
+
+- [MathieuHugo/digital_thermal_right_lcd](https://github.com/MathieuHugo/digital_thermal_right_lcd) - 原始 Linux 實現
+- [Ushan-destiny/Thermalright-LCD-Windows](https://github.com/Ushan-destiny/Thermalright-LCD-Windows) - Windows 連接參考
+- [JasonShiao/thermalright_digital_lcd](https://github.com/JasonShiao/thermalright_digital_lcd) - 額外協定參考
+
+也感謝 AX120 數位顯示器的 `led_mapper.py` 工具，對理解 LED 位置映射很有幫助。
+
 ## 授權
 
 MIT License
