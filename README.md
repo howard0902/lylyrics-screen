@@ -69,27 +69,6 @@ npm install
 python -m pip install -r requirements-lcd.txt
 ```
 
-## 打包
-
-建立 Windows 安裝檔：
-
-```bash
-npm run dist
-```
-
-輸出檔會在：
-
-```text
-dist/lyLyrics screen-0.1.0-x64.exe
-```
-
-## Release 檔案
-
-正式發布建議放這些檔案：
-
-- `lyLyrics screen-0.1.0-x64.exe`
-- `lyLyrics screen-0.1.0-x64.exe.blockmap`
-
 ## 授權
 
 MIT License
