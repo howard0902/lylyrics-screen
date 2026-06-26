@@ -1,4 +1,4 @@
-# Lyrics screen
+# lyLyrics screen
 
 把 Spotify 現正播放的歌詞，直接顯示到 Thermalright USB LCD 上的 Windows app。
 
