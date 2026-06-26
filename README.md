@@ -51,6 +51,20 @@ http://127.0.0.1:17321/callback
 4. 按下 `儲存並連接 Spotify`。
 5. 連接完成後，開始播放 Spotify 音樂，歌詞就會同步顯示到 LCD。
 
+## 防毒誤判
+
+如果你在其他電腦上看到 Windows Defender 或 `Smart App Control` 跳出警告，通常比較可能是誤判，不一定代表程式真的有問題。
+
+可能原因包含：
+
+- 程式沒有數位簽章
+- 使用 Electron 打包後的 `exe` 容易被新電腦當成未知程式
+- 內含獨立的 `lcd_bridge.exe`，看起來像多層封裝程式
+- 程式會直接和 USB LCD 溝通，這種硬體控制軟體有時比較容易被安全機制提高警戒
+- 新下載的檔案在 Windows 上沒有信譽分數
+
+如果真的被擋住，通常不是因為「控制 LCD」本身有問題，而是因為上面這些封裝與簽章因素一起讓防毒比較敏感。
+
 ## 關閉 SignalRGB 服務
 
 如果 `SignalRgb.Service` 佔用 LCD，可以用系統管理員 PowerShell 執行：
