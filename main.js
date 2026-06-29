@@ -19,7 +19,7 @@ const DEFAULT_SETTINGS = {
   },
 };
 
-const APP_NAME = "lyLyrics screen";
+const APP_NAME = "Spotify Lyrics LCD";
 const POLL_INTERVAL_MS = 15_000;
 const lyricsCache = new Map();
 let mainWindow = null;
@@ -723,7 +723,7 @@ async function fetchLyrics(track) {
 
   const getResponse = await fetch(`https://lrclib.net/api/get?${baseParams.toString()}`, {
     headers: {
-      "User-Agent": "lyLyrics-screen/0.2.0",
+      "User-Agent": "SpotifyLyricsLCD/0.2.0",
     },
   });
 
@@ -740,7 +740,7 @@ async function fetchLyrics(track) {
 
   const searchResponse = await fetch(`https://lrclib.net/api/search?${searchParams.toString()}`, {
     headers: {
-      "User-Agent": "lyLyrics-screen/0.2.0",
+      "User-Agent": "SpotifyLyricsLCD/0.2.0",
     },
   });
 

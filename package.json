@@ -1,7 +1,7 @@
 {
-  "name": "lylyrics-screen",
+  "name": "spotify-lyrics-lcd",
   "version": "0.2.0",
-  "productName": "lyLyrics screen",
+  "productName": "Spotify Lyrics LCD",
   "description": "A desktop lyric screen for Spotify playback on Thermalright LCDs.",
   "main": "main.js",
   "scripts": {
@@ -18,9 +18,9 @@
     "electron-builder": "^26.0.12"
   },
   "build": {
-    "appId": "com.lylyrics.screen",
-    "productName": "lyLyrics screen",
-    "artifactName": "${productName}-${version}-${arch}.${ext}",
+    "appId": "com.spotifylyricslcd.app",
+    "productName": "Spotify Lyrics LCD",
+    "artifactName": "${name}-${version}-${arch}.${ext}",
     "files": [
       "main.js",
       "preload.js",
@@ -47,7 +47,7 @@
       "perMachine": false,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "lyLyrics screen"
+      "shortcutName": "Spotify Lyrics LCD"
     }
   }
 }
